@@ -1,0 +1,156 @@
+/* reset css */
+html { box-sizing: border-box; font-size: 10px; height: 100%;}
+*, *:before, *:after { box-sizing: inherit; }
+body, ul, li  { margin: 0; padding: 0; }
+li { list-style: none; }
+p, h1, h2, h3, h4, h5, h6 { margin-top: 0; }
+a { text-decoration: none; }
+input { border-style: none; background: transparent; outline: none; }
+button { padding: 0; background: none; border: none; outline: none; }
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	line-height: 1.4em;
+	background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
+	color: white;
+	min-height: 100%;
+}
+
+header{
+	font-family: 'Montserrat', sans-serif;
+	padding: 40px 20px;
+	font-size: 35px;
+	box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.3);
+	overflow: auto;
+}
+
+h3{
+	padding: 15px 20px;
+}
+
+@keyframes gradient { 
+	0%{background-position:0 0}
+	100%{background-position:100% 0}
+  }
+
+.questionForm, #play {
+	background: rgba(57, 63, 84, 0.8);
+	border-radius: 5px;
+	padding: 20px 15px;
+	overflow: auto;
+	color:  white;
+	box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.2);
+}
+
+.container{
+	width: 70%;
+	margin: 120px auto;
+}
+
+.style-input {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+	border-radius: 2px;
+	padding: 1.4rem 2rem 1.6rem;
+	background: rgba(57, 63, 84, 0.8);
+}
+
+.style-input::after{
+	content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 999;
+    height: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-position: 0% 0%;
+    background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+    background-size: 500% auto;
+    animation: gradient 3s linear infinite;
+}
+
+.style-input input {
+	width: 100%;
+	color: rgb(246, 129, 250);
+	font-size: 1.8rem;
+	padding: 2px 0%;
+	vertical-align: middle;
+}
+
+.style-input button {
+	color: #7881A1;
+	font-size: 2.4rem;
+	padding: 2px 0%;
+	vertical-align: middle;
+}
+
+.to-left{float: left}
+.to-right{float: right}
+.name{font-size: .5em}
+
+#submit{
+	font-size: 1em;
+	padding: 13px 38px;
+	margin-top: 20px;
+	background-color: #e0758e;
+	border-radius: 4px;
+	color: white;
+}
+
+#submit:hover{
+	outline: 0;
+	color: white;
+	background-color: rgb(246, 129, 250);
+}
+
+ul li{
+	color: #7881A1;
+	position: relative;
+	padding: 0.5em 4em;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+label:focus, label:hover, label:active, input:checked + label{
+	cursor: pointer;
+	font-weight: bold;
+	color: #e0758e;
+}
+
+label {
+	position: relative;
+	cursor: pointer;
+	transition: all .25s ease;
+}
+
+label:hover{
+	color: white;
+}
+/*PLAY*/
+#play h3 {
+	text-align: center;
+}
+
+#play{
+	margin: 0 312px;
+}
+
+/*GAME OVER*/
+#gameover {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#result{
+	text-align: center;
+	line-height: 55px;
+}

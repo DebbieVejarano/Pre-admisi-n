@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PREGUNGATOS</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="to-left">PREGUNGATOS</div>
+        <div class="to-right name" id="user"></div>
+    </header>
+
+    <div class="container">
+        <div id="login">
+            <div class="style-input">
+                <!-- Agregamos validaciones para no obtener nombres en blanco-->
+                <input type="text" name="inputName" id="inputUser" placeholder="¿Cual es tu nombre?">
+                <button type="submit" id="buttonName">O</button>
+            </div>
+        </div>
+
+        <div id="play">
+            <h3>¿Iniciamos el reto?</h3>
+            <button id="submit" class="to-right cancel">Aún no</button>
+            <button id="submit" class="to-left start">¡Vamos!</button>
+        </div>
+
+        <div id="gameover">
+            <h1>¡Que lástima! Regresa pronto.</h1>
+        </div>
+
+        <main>
+
+            <div>
+                <form class="questionForm" id='q1'>
+                    <h3>¿De que color son los ojos de los gatos al nacer?</h3>
+                    <ul>
+                        <li>
+                            <input type="radio" name="q1" value="a" id="radio-01" checked>
+                            <label class="label" for="radio-01">Depende de los padres</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="q1" value="b" id="radio-02">
+                            <label class="label" for="radio-02">Azules</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="q1" value="c" id="radio-03">
+                            <label class="label" for="radio-03">Verdes</label>
+                        </li>
+                    </ul>
+                    <button id="submit" class="to-right">Siguiente</button>
+                </form>
+
+                <form class="questionForm" id='q2'>
+                    <h3>Un gato de tres colores ¿Suele ser?</h3>
+                    <ul>
+                        <li>
+                            <input type="radio" name="q2" value="a" id="radio-04" checked>
+                            <label class="label" for="radio-04">Hembra</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="q2" value="b" id="radio-05">
+                            <label class="label" for="radio-05">Macho</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="q2" value="c" id="radio-06">
+                            <label class="label" for="radio-06">Hermafrodita</label>
+                        </li>
+                    </ul>
+                    <button id="submit" class="to-right">Siguiente</button>
+                </form>
+
+                <form class="questionForm" id='q3'>
+                    <h3>¿Cuantos dedos tienen los gatos?</h3>
+                    <ul>
+                        <li>
+                            <input type="radio" name="q3" value="a" id="radio-07" checked>
+                            <label class="label" for="radio-07">20</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="q3" value="b" id="radio-08">
+                            <label class="label" for="radio-08">18</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="q3" value="c" id="radio-09">
+                            <label class="label" for="radio-09">12</label>
+                        </li>
+                    </ul>
+                    <button id="submit" class="to-right">Finalizar</button>
+                </form>
+
+                <div id='result'></div>
+            </div>
+        </main>
+    </div>
+    <!--Agregamos los scripts al final para evitar que algo no se carge-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>
